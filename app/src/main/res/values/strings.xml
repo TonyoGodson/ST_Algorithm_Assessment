@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ST_Assessment</string>
+    <string name="click_the_add_button_below_to_generate_account_number">Click the add button below to generate account number.</string>
+    <string name="modulo_sum_10">Modulus (Sum % 10):</string>
+    <string name="sum_of_result">Sum of Result:</string>
+    <string name="multiplied_result">Multiplied Result:</string>
+    <string name="multiplying_factor">Multiplying Factor:</string>
+    <string name="bcode_amp_randomno"><![CDATA[BankCode & S/No:]]></string>
+    <string name="randon_number">Serial Number:</string>
+    <string name="_10_modulo">Check Digit:</string>
+    <string name="account_number">Account Number:</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.godston.st_assessment // ktlint-disable package-name
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.godston.st_assessment.databinding.ActivityMainBinding
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.createNo.setOnClickListener {
             calculate()
-            println("This is the accountList: $accountList")
+            binding.instructionTv.visibility = View.GONE
             accountAdapter = AccountAdapter()
             val rvLayoutManager = LinearLayoutManager(this@MainActivity)
             rvLayoutManager.reverseLayout = true
@@ -67,7 +68,8 @@ class MainActivity : AppCompatActivity() {
         val mappedNumber = "$list"
         val _total = "$total"
         val modulo = "${total % 10}"
-        val extra = "${10 - (total % 10)}"
+        val chkDgt = if (modulo == "0") modulo
+        else "${10 - (total % 10)}"
         println("$number${10 - (total % 10)}")
         val acctNo = if (modulo == "0") "$randomNo$modulo"
         else "$randomNo${10 - (total % 10)}"
@@ -78,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             mappedNumber,
             _total,
             modulo,
-            extra,
+            chkDgt,
             acctNo
         )
         accountList.add(toAdd)
